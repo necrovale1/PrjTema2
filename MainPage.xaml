@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              BackgroundColor="{DynamicResource BackgroundColor}"
+             x:Class="PrjTema2.MainPage">
+
+    <VerticalStackLayout Spacing="25" VerticalOptions="CenterAndExpand">
+
+        <!-- Logo -->
+        <Image Source="logo.png" HeightRequest="100" HorizontalOptions="Center" />
+
+        <!-- Título e Subtítulo -->
+        <Label Text="Crypto"
+               FontAttributes="Bold"
+               FontSize="28"
+               TextColor="{DynamicResource PrimaryTextColor}"
+               HorizontalOptions="Center"/>
+
+        <Label Text="O maior marketplace de NFTs do Brasil"
+               FontSize="14"
+               TextColor="{DynamicResource PrimaryTextColor}"
+               HorizontalOptions="Center"/>
+
+        <!-- Campo de Usuário -->
+        <BackgroundColor="{DynamicResource CardColor}" CornerRadius="10" Padding="10" HasShadow="False">
+            <HorizontalStackLayout>
+                <Image Source="user_icon.png" WidthRequest="20" HeightRequest="20" />
+                <Entry Placeholder="Usuário"
+                       PlaceholderColor="{DynamicResource SecondaryTextColor}"
+                       TextColor="{DynamicResource PrimaryTextColor}"
+                       BackgroundColor="Transparent"
+                       Margin="10,0,0,0"/>
+            </HorizontalStackLayout>
+        </BackgroundColor>
+
+        <!-- Campo de Senha -->
+        <Frame BackgroundColor="{DynamicResource CardColor}" CornerRadius="10" Padding="10" HasShadow="False">
+            <HorizontalStackLayout>
+                <Image Source="lock_icon.png" WidthRequest="20" HeightRequest="20" />
+                <Entry Placeholder="Senha"
+                       IsPassword="True"
+                       PlaceholderColor="{DynamicResource SecondaryTextColor}"
+                       TextColor="{DynamicResource PrimaryTextColor}"
+                       BackgroundColor="Transparent"
+                       Margin="10,0,0,0"
+                       HorizontalOptions="FillAndExpand"/>
+                <Image Source="eye_icon.png" WidthRequest="20" HeightRequest="20"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <!-- Recuperar senha -->
+        <Label Text="Recuperar a senha?"
+               FontSize="12"
+               TextColor="{DynamicResource HighlightColor}"
+               HorizontalOptions="End"/>
+
+        <!-- Botão Entrar -->
+        <Button Text="Entrar"
+                Style="{DynamicResource PrimaryButton}" />
+
+        <!-- Separador -->
+        <BoxView HeightRequest="1" BackgroundColor="{DynamicResource SecondaryTextColor}" />
+
+        <!-- Botão Metamask -->
+        <Button Text="Entrar com Metamask"
+                Style="{DynamicResource MetamaskButton}" />
+    </VerticalStackLayout>
+</ContentPage>
